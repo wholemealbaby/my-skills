@@ -14,4 +14,3 @@ Answer the user's question using the codebase and existing knowledge. This skill
 - Prefer answering from existing knowledge and the codebase. Cite specific files and line numbers when referencing code.
 - If the question cannot be answered from the codebase and knowledge, say so rather than guessing.
 - Keep answers concise and direct. Do not make changes or propose patches unless the user explicitly asks for them.
-</content>

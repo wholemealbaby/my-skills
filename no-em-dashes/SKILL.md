@@ -90,11 +90,11 @@ Scan the finished text for the em dash and its stand-ins, then fix any that punc
 If code execution is available, run the bundled checker on a draft file or via stdin:
 
 ```bash
-python "${CLAUDE_SKILL_DIR}/scripts/check_em_dashes.py" path/to/draft.txt
-echo "Your text here" | python "${CLAUDE_SKILL_DIR}/scripts/check_em_dashes.py"
+python scripts/check_em_dashes.py path/to/draft.txt
+echo "Your text here" | python scripts/check_em_dashes.py
 ```
 
-`${CLAUDE_SKILL_DIR}` resolves to this skill's folder however it was installed (personal, project, or plugin). If it is not set, point at `scripts/check_em_dashes.py` inside this skill directory. It prints every hit with its location and a suggested fix, and exits nonzero if anything is found. If you cannot run code, do the scan by eye: search the text for the em dash character, for a double hyphen, and for a hyphen with a space on each side, and rewrite each one using the playbook above.
+The path `scripts/check_em_dashes.py` is relative to this skill's folder, so resolve it to wherever the skill was installed (personal, project, or plugin) before running. It prints every hit with its location and a suggested fix, and exits nonzero if anything is found. If you cannot run code, do the scan by eye: search the text for the em dash character, for a double hyphen, and for a hyphen with a space on each side, and rewrite each one using the playbook above.
 
 ## Worked examples
 
